@@ -16,7 +16,7 @@ namespace AshTechSample.Scenes
 
         public override void LoadContent()
         {
-            font = AssetManager.LoadFont("Content/AshTechSample.zip", "m5x7.ttf", 16);
+            font = AssetManager.LoadSpriteFontBase("Content/AshTechSample.zip", "m5x7.ttf", 16);
         }
 
         public override void Update(GameTime gameTime, bool sceneHasFocus)
@@ -25,6 +25,7 @@ namespace AshTechSample.Scenes
 
         public override void HandleInput(GameTime gameTime, bool sceneHasFocus, InputManager input)
         {
+
         }
 
         public override void Draw(GameTime gameTime, bool sceneHasFocus)
