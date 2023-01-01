@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas Image="ui_stylesheet_atlas.png">
+  <TextureRegion Id="button-up-layer-up" Left="0" Top="0" Width="12" Height="12" />
+  <NinePatchRegion Id="close-round-down" Left="12" Top="0" Width="12" Height="12" NinePatchLeft="5" NinePatchTop="5" NinePatchRight="5" NinePatchBottom="5" />
+  <NinePatchRegion Id="close-round" Left="24" Top="0" Width="12" Height="12" NinePatchLeft="5" NinePatchTop="5" NinePatchRight="5" NinePatchBottom="5" />
+  <TextureRegion Id="default-check-off" Left="36" Top="0" Width="12" Height="12" />
+  <TextureRegion Id="default-check-on" Left="48" Top="0" Width="12" Height="12" />
+  <NinePatchRegion Id="default-rect" Left="60" Top="0" Width="3" Height="3" NinePatchLeft="1" NinePatchTop="1" NinePatchRight="1" NinePatchBottom="1" />
+  <NinePatchRegion Id="default-round-down" Left="63" Top="0" Width="12" Height="12" NinePatchLeft="5" NinePatchTop="5" NinePatchRight="5" NinePatchBottom="5" />
+  <NinePatchRegion Id="default-round" Left="75" Top="0" Width="12" Height="12" NinePatchLeft="5" NinePatchTop="5" NinePatchRight="5" NinePatchBottom="5" />
+  <NinePatchRegion Id="default-select-drop" Left="87" Top="0" Width="27" Height="5" NinePatchLeft="13" NinePatchTop="1" NinePatchRight="13" NinePatchBottom="3" />
+  <NinePatchRegion Id="default-select" Left="114" Top="0" Width="27" Height="21" NinePatchLeft="4" NinePatchTop="10" NinePatchRight="22" NinePatchBottom="10" />
+  <TextureRegion Id="default-slider-knob" Left="141" Top="0" Width="10" Height="15" />
+  <NinePatchRegion Id="default-slider" Left="151" Top="0" Width="12" Height="15" NinePatchLeft="5" NinePatchTop="0" NinePatchRight="5" NinePatchBottom="15" />
+  <NinePatchRegion Id="default-window" Left="163" Top="0" Width="27" Height="29" NinePatchLeft="12" NinePatchTop="17" NinePatchRight="11" NinePatchBottom="10" />
+  <NinePatchRegion Id="green-round" Left="190" Top="0" Width="12" Height="12" NinePatchLeft="5" NinePatchTop="5" NinePatchRight="5" NinePatchBottom="5" />
+  <NinePatchRegion Id="horizontal-separator" Left="202" Top="0" Width="3" Height="2" NinePatchLeft="2" NinePatchTop="1" NinePatchRight="0" NinePatchBottom="0" />
+  <NinePatchRegion Id="textfield" Left="205" Top="0" Width="10" Height="8" NinePatchLeft="4" NinePatchTop="3" NinePatchRight="4" NinePatchBottom="3" />
+</TextureAtlas>

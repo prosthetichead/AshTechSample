@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Myra;
 
 namespace AshTechSample.Scenes
 {
@@ -16,11 +17,12 @@ namespace AshTechSample.Scenes
 
         public override void LoadContent()
         {
-            font = AssetManager.LoadSpriteFontBase("Content/AshTechSample.zip", "m5x7.ttf", 16);
+            font = AssetManager.LoadFontSystem("m5x7.ttf", "Content/AshTechSample.zip").GetFont(16);
         }
 
         public override void Update(GameTime gameTime, bool sceneHasFocus)
         {
+            
         }
 
         public override void HandleInput(GameTime gameTime, bool sceneHasFocus, InputManager input)
