@@ -3,6 +3,8 @@ using AshTechSample.Scenes;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Myra.Graphics2D.TextureAtlases;
+using Myra.Graphics2D.UI.Styles;
 
 namespace AshTechSample
 {
@@ -21,6 +23,8 @@ namespace AshTechSample
 
             ashTech = new AshTechEngine(this, _graphics);
             Components.Add(ashTech);
+            
+
         }
 
         protected override void Initialize()

@@ -1,7 +1,0 @@
-<Project>
-    <VerticalStackPanel Spacing="5" HorizontalAlignment="Center" VerticalAlignment="Center" >
-      <TextButton Text="Start" HorizontalAlignment="Center" Id="StartTxtBtn" />    
-      <TextButton Text="Options" HorizontalAlignment="Center" Id="OptionsTxtBtn" />    
-      <TextButton Text="Exit" HorizontalAlignment="Center" Id="ExitTxtBtn" /> 
-    </VerticalStackPanel>
-</Project>
