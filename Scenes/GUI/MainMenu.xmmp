@@ -1,8 +1,0 @@
-<Project>
-  <Project.ExportOptions Namespace="AshTechSample.Scenes.GUI" Class="MainMenu" OutputPath="C:\Users\ashle\source\repos\AshTechSample\Scenes\GUI" />
-  <VerticalStackPanel Spacing="10" HorizontalAlignment="Center" VerticalAlignment="Center">
-    <TextButton Text="Start" HorizontalAlignment="Center" VerticalAlignment="Center" Id="txtbtnStart" />
-    <TextButton Text="Options" HorizontalAlignment="Center" VerticalAlignment="Center" Id="txtbtnOptions" />
-    <TextButton Text="Exit" HorizontalAlignment="Center" VerticalAlignment="Center" Id="txtbtnExit" />
-  </VerticalStackPanel>
-</Project>

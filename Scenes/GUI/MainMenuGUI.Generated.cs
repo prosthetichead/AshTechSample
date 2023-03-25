@@ -11,7 +11,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace AshTechSample.Scenes.GUI
 {
-	partial class MainMenu: VerticalStackPanel
+	partial class MainMenuGUI: VerticalStackPanel
 	{
 		private void BuildUI()
 		{

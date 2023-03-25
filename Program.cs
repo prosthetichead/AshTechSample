@@ -1,3 +1,3 @@
 ﻿
-using var game = new AshTechSample.Game1();
+using var game = new AshTechSample.AshTechSampleGame();
 game.Run();

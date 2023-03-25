@@ -17,21 +17,24 @@ namespace AshTechSample.Scenes
         SpriteFontBase font;
         Desktop desktop;
 
+        GUI.MainMenuGUI mainMenuGUI;
+
         public override void LoadContent()
         {
             desktop = new Desktop();
 
             font = AshAssetManager.LoadFontSystem("m5x7.ttf", "Content/AshTechSample.zip").GetFont(16);
 
-            var mainMenu = new GUI.MainMenu();
+            mainMenuGUI = new GUI.MainMenuGUI();
 
-            mainMenu.txtbtnStart.Click += StartButtonClicked;
+            mainMenuGUI.txtbtnStart.Click += StartButtonClicked;
 
-            desktop.Root = mainMenu;
+            desktop.Root = mainMenuGUI;
         }
 
         private void StartButtonClicked(object sender, EventArgs e)
         {
+            AddScene("gameScene", new GameScene());
             
         }
 
@@ -47,7 +50,7 @@ namespace AshTechSample.Scenes
 
         public override void Draw(GameTime gameTime, bool sceneHasFocus)
         {
-            GraphicsDevice.Clear(Color.Black);
+           // GraphicsDevice.Clear(Color.Black);
             SpriteBatch.Begin();
             SpriteBatch.DrawString(font, "AshTech Sample. Main Menu ", new Vector2(10,10), Color.Green) ;
             SpriteBatch.End();

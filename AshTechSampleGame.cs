@@ -8,14 +8,14 @@ using Myra.Graphics2D.UI.Styles;
 
 namespace AshTechSample
 {
-    public class Game1 : Game
+    public class AshTechSampleGame : Game
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
 
         private AshTechEngine ashTech;
 
-        public Game1()
+        public AshTechSampleGame()
         {
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
@@ -40,7 +40,7 @@ namespace AshTechSample
 
 
             MainMenu mainMenu = new MainMenu();
-            ashTech.AddScene(mainMenu);
+            ashTech.AddScene("mainMenu", mainMenu);
         }
 
         protected override void Update(GameTime gameTime)
