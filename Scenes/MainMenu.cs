@@ -6,8 +6,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Myra;
-using Myra.Graphics2D.UI;
 
 namespace AshTechSample.Scenes
 {
@@ -15,21 +13,15 @@ namespace AshTechSample.Scenes
     {
 
         SpriteFontBase font;
-        Desktop desktop;
 
-        GUI.MainMenuGUI mainMenuGUI;
 
         public override void LoadContent()
         {
-            desktop = new Desktop();
+            
 
             font = AshAssetManager.LoadFontSystem("m5x7.ttf", "Content/AshTechSample.zip").GetFont(16);
 
-            mainMenuGUI = new GUI.MainMenuGUI();
-
-            mainMenuGUI.txtbtnStart.Click += StartButtonClicked;
-
-            desktop.Root = mainMenuGUI;
+            
         }
 
         private void StartButtonClicked(object sender, EventArgs e)
@@ -53,9 +45,7 @@ namespace AshTechSample.Scenes
            // GraphicsDevice.Clear(Color.Black);
             SpriteBatch.Begin();
             SpriteBatch.DrawString(font, "AshTech Sample. Main Menu ", new Vector2(10,10), Color.Green) ;
-            SpriteBatch.End();
-
-            desktop.Render();
+            SpriteBatch.End();            
         }
 
         public override void UnloadContent()
