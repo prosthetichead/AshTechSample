@@ -38,14 +38,14 @@ namespace AshTechSample
 
 
             MainMenu mainMenu = new MainMenu();
+            GameScene gameScene = new GameScene();
             ashTech.AddScene("mainMenu", mainMenu);
+            ashTech.AddScene("game", gameScene);
+            ashTech.ActivateScene("mainMenu");
         }
 
         protected override void Update(GameTime gameTime)
         {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-                Exit();
-
             // TODO: Add your update logic here
 
             base.Update(gameTime);

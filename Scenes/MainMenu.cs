@@ -1,4 +1,6 @@
 ﻿using AshTech.Core;
+using AshTech.UI;
+using AshTech.UI.Widgets;
 using FontStashSharp;
 using Microsoft.Xna.Framework;
 using System;
@@ -13,26 +15,32 @@ namespace AshTechSample.Scenes
     {
 
         SpriteFontBase font;
-
+        Desktop mainMenu;
+        Button startButton;
+        
 
         public override void LoadContent()
-        {
-            
+        {           
 
             font = AshAssetManager.LoadFontSystem("m5x7.ttf", "Content/AshTechSample.zip").GetFont(16);
 
+            mainMenu = new Desktop(GraphicsDevice.Viewport.Bounds, Game);
+            GameSettings.SettingsChanaged += GameSettings_SettingsChanaged;
+
+            startButton = new Button(mainMenu, new Rectangle(0, 0, 200, 100), DesktopAnchor.TopLeft, font);
+            mainMenu.AddWidget("startButton", startButton);
+            startButton.value = "START GAME";
             
         }
 
-        private void StartButtonClicked(object sender, EventArgs e)
+        private void GameSettings_SettingsChanaged(object sender, EventArgs e)
         {
-            AddScene("gameScene", new GameScene());
-            
+            mainMenu.bounds = GraphicsDevice.Viewport.Bounds;
         }
 
         public override void Update(GameTime gameTime, bool sceneHasFocus)
         {
-            
+            mainMenu.Update(gameTime);
         }
 
         public override void HandleInput(GameTime gameTime, bool sceneHasFocus, InputManager input)
@@ -44,7 +52,11 @@ namespace AshTechSample.Scenes
         {
            // GraphicsDevice.Clear(Color.Black);
             SpriteBatch.Begin();
-            SpriteBatch.DrawString(font, "AshTech Sample. Main Menu ", new Vector2(10,10), Color.Green) ;
+
+            mainMenu.Draw(SpriteBatch);
+            
+            SpriteBatch.DrawString(font, "AshTech Sample. Main Menu ", new Vector2(10,10), Color.Black) ;
+
             SpriteBatch.End();            
         }
 
