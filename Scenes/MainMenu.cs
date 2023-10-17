@@ -25,12 +25,14 @@ namespace AshTechSample.Scenes
             font = AssetManager.LoadFontSystem("m5x7.ttf", "Content/AshTechSample.zip").GetFont(16);
 
             mainMenu = new Desktop(GraphicsDevice.Viewport.Bounds, Game);
-            GameSettings.SettingsChanaged += GameSettings_SettingsChanaged;
-
-            startButton = new Button(mainMenu, new Rectangle(0, 0, 200, 100), DesktopAnchor.TopLeft, font);
+            
+            startButton = new Button(new Rectangle(0, 0, 200, 100), DesktopAnchor.TopLeft, font);
             mainMenu.AddWidget("startButton", startButton);
             startButton.value = "START GAME";
-            
+
+            //setup events
+            GameSettings.SettingsChanaged += GameSettings_SettingsChanaged;
+
         }
 
         private void GameSettings_SettingsChanaged(object sender, EventArgs e)
@@ -45,7 +47,7 @@ namespace AshTechSample.Scenes
 
         public override void HandleInput(GameTime gameTime, bool sceneHasFocus, InputManager input)
         {
-
+            mainMenu.HandleInput(gameTime, input);
         }
 
         public override void Draw(GameTime gameTime, bool sceneHasFocus)
