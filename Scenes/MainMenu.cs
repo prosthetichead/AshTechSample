@@ -22,7 +22,7 @@ namespace AshTechSample.Scenes
         public override void LoadContent()
         {           
 
-            font = AshAssetManager.LoadFontSystem("m5x7.ttf", "Content/AshTechSample.zip").GetFont(16);
+            font = AssetManager.LoadFontSystem("m5x7.ttf", "Content/AshTechSample.zip").GetFont(16);
 
             mainMenu = new Desktop(GraphicsDevice.Viewport.Bounds, Game);
             GameSettings.SettingsChanaged += GameSettings_SettingsChanaged;

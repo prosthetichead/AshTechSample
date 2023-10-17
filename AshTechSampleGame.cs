@@ -21,14 +21,10 @@ namespace AshTechSample
 
             ashTech = new AshTechEngine(this, _graphics);
             Components.Add(ashTech);
-            
-
         }
 
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
-
             base.Initialize();
         }
 
@@ -36,11 +32,12 @@ namespace AshTechSample
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
-
             MainMenu mainMenu = new MainMenu();
             GameScene gameScene = new GameScene();
+
             ashTech.AddScene("mainMenu", mainMenu);
             ashTech.AddScene("game", gameScene);
+
             ashTech.ActivateScene("mainMenu");
         }
 
@@ -54,9 +51,6 @@ namespace AshTechSample
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
-
-            // TODO: Add your drawing code here
-
             base.Draw(gameTime);
         }
     }
