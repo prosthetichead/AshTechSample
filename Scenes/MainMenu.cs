@@ -26,19 +26,12 @@ namespace AshTechSample.Scenes
 
             mainMenu = new Desktop(GraphicsDevice.Viewport.Bounds, Game);
             
-            startButton = new Button(new Rectangle(0, 0, 200, 100), DesktopAnchor.TopLeft, font);
-            mainMenu.AddWidget("startButton", startButton);
+            startButton = new Button("startButton", new Rectangle(0, 0, 200, 100), DesktopAnchor.TopLeft);
+            mainMenu.AddWidget(startButton);
             startButton.value = "START GAME";
 
-            //setup events
-            GameSettings.SettingsChanaged += GameSettings_SettingsChanaged;
-
         }
 
-        private void GameSettings_SettingsChanaged(object sender, EventArgs e)
-        {
-            mainMenu.bounds = GraphicsDevice.Viewport.Bounds;
-        }
 
         public override void Update(GameTime gameTime, bool sceneHasFocus)
         {
