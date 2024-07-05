@@ -26,7 +26,7 @@ namespace AshTechSample.Scenes
 
             mainMenu = new Desktop(GraphicsDevice.Viewport.Bounds, Game);
             
-            startButton = new Button("startButton", new Rectangle(0, 0, 200, 100), DesktopAnchor.TopLeft);
+            startButton = new Button("startButton", new Rectangle(200, 200, 70, 30), DesktopAnchor.TopLeft);
             mainMenu.AddWidget(startButton);
             startButton.value = "START GAME";
 
